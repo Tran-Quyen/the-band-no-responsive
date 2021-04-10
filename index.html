@@ -41,9 +41,6 @@
         <div class="search-btn">
           <i class="search-icon fas fa-search"></i>
         </div>
-        <div id="mobile-menu" class="mobile-menu-btn">
-          <i class="menu-icon ti-menu"></i>
-        </div>
         <!-- End: Search btn -->
       </div>
 
@@ -224,37 +221,5 @@
         <p class="copyright">Powered by <a href="#">w3.css</a></p>
       </div>
     </div>
-    <script>
-      var header = document.getElementById("header");
-      var mobileMenu = document.getElementById("mobile-menu");
-      var headerHeight = header.clientHeight;
-
-      // Đóng/Mở mobile menu
-      mobileMenu.onclick = function () {
-        var isClose = header.clientHeight === headerHeight;
-        if (isClose) {
-          header.style.height = "auto";
-        } else {
-          header.style.height = null;
-        }
-      };
-
-      // Tự động đóng khi chọn menu
-      // Select all #nav li a có href bắt đầu bằng #
-      var menuItems = document.querySelectorAll("#nav li a[href*='#']");
-
-      for (var i = 0; i < menuItems.length; i++) {
-        var menuItem = menuItems[i];
-        menuItem.onclick = function (event) {
-          var isParentMenu =
-            this.nextElementSibling && this.nextElementSibling.classList.contains("subnav");
-          if (isParentMenu) {
-            event.preventDefault();
-          } else {
-            header.style.height = null;
-          }
-        };
-      }
-    </script>
   </body>
 </html>
