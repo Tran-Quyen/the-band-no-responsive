@@ -6,21 +6,21 @@
 }
 
 html {
-  /*Note: K0 nên đặt css này trong * selector vì * selector sẽ apply lên all 
+  /*Note: K0 nên đặt css này trong * selector vì * selector sẽ apply lên all
   element của browser còn html chỉ apply với text */
-  /*Lấy kiểu nếu cái đầu trong máy k0 có chuyển sang kiểu sau và không có 
+  /*Lấy kiểu nếu cái đầu trong máy k0 có chuyển sang kiểu sau và không có
   đến lấy bất kỳ kiểu nào thuộc chủng sans-serif (Tập hợp kiểu)*/
   font-family: Helvetica, Arial, sans-serif;
   scroll-behavior: smooth; /*Hiệu ứng scoll trượt khi click vào url*/
 }
 
-/* 
+/*
 1. Từ ngoài vào trong
 2. Từ trên xuống dưới
 3. Từ tổng quan đến chi tiết
 */
 
-/* 
+/*
 1. position
 2. size (width và height)
 3. color
@@ -193,10 +193,10 @@ html {
   bottom: 48px;
   /* căn giữa c1 */
   width: 100%;
-  /*cách 2 
+  /*cách 2
   right: 0;
   left: 0;*/
-  /* cách 3 
+  /* cách 3
   left: 50%;
   transform: translateX(-50%); */
   color: #fff;
@@ -368,7 +368,7 @@ html {
   opacity: 1;
 }
 
-.contact-info i[class*="ti-"] {
+.contact-info i[class*="fa"] {
   width: 30px;
   display: inline-block;
 }
@@ -401,6 +401,7 @@ html {
 
 .map-section img {
   width: 100%;
+  filter: grayscale(0.5);
 }
 
 /* Footer section */
@@ -414,6 +415,7 @@ html {
 }
 
 #footer .social-list a {
+  font-size: 24px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.6);
 }
